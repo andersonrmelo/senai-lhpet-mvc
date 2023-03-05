@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LHPet</title>
+    <link rel="stylesheet" href="~/css/pico.classless.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LHPet.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav>
+        <h2>LHPet</h2>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

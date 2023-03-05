@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <table>
+        <thead>
+            <tr>
+            <th scope="col"><strong>ID</strong></th>
+            <th scope="col"><strong>Nome</strong></th>
+            <th scope="col"><strong>CPF</strong></th>
+            <th scope="col"><strong>E-mail</strong></th>
+            <th scope="col"><strong>Paciente</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.listaClientes)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Nome</td>
+                    <td>@item.Cpf</td>
+                    <td>@item.Email</td>
+                    <td>@item.Paciente</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+            <th scope="col"><strong>ID</strong></th>
+            <th scope="col"><strong>Nome</strong></th>
+            <th scope="col"><strong>CNPJ</strong></th>
+            <th scope="col"><strong>E-mail</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.listaFornecedores)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Nome</td>
+                    <td>@item.Cnpj</td>
+                    <td>@item.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
